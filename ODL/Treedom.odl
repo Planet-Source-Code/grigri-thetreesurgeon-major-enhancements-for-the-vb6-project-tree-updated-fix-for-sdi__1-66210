@@ -1,0 +1,23 @@
+[
+    uuid(6E7C5BF7-FCB2-476b-8DC4-134019F56D39),
+    version(1.0),
+    helpstring("Treedom Helper Library")
+]
+library TreedomHelper
+{
+  importlib("stdole2.tlb");
+  
+  typedef struct {
+    long data1;
+    short data2;
+    short data3;
+    unsigned char data4[8];
+  } GUID;
+
+  #include "Malloc.inc"
+  #include "ShellFolder.inc"
+  #include "ContextMenu.inc"
+  
+  #include "FastRender.inc"
+
+}
