@@ -1,0 +1,33 @@
+The Tree Surgeon : Program History
+==================================
+
+This document tracks the changes made to the codebase of the
+Add-In called "The Tree Surgeon" by grigri, 2006.
+
+07/08/2006 : v1.0
+-----------------
+
+Initial Version
+
+08/08/2006 : v1.1
+-----------------
+
+Changes:
+
+* Added this file.
+
+* Enabled support for VB IDE SDI mode (welcome to acronym hell)
+  - Added 3 functions to ApiDeclares.bas for window drilling
+  - Changed the project window detection function to use them
+  - Added a "paranoid check" in case the window is not found.
+  
+* Moved Custom-Draw variables from Static (in TreeSurgeon::ProjectWndProc())
+  to module-level private.
+  
+* Added code to release the 2nd timer (icon cache refresh) on exit.
+
+* Moved the MiniDemo code to a separate class module (MiniDemo.cls).
+  (Also changed a few minor points in MiniDemo.cls)
+
+* Converted all class modules to private (can't think why I didn't do this before).
+  This involved changing some structure arguments to pointers (Bitmap::GetBits())
